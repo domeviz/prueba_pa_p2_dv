@@ -8,7 +8,7 @@ public interface IVehiculoRepository {
 
 	public Vehiculo buscar(String placa);
 
-	public void actualizar(String marca);
+	public void actualizar(Vehiculo vehiculo);
 
 	public void eliminar(Vehiculo vehiculo);
 }

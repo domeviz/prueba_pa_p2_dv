@@ -12,8 +12,8 @@ public class Matricula {
 	
 	@Override
 	public String toString() {
-		return "Matricula [fechaMatricula=" + fechaMatricula + ", valorMatricula=" + valorMatricula + ", propietario="
-				+ propietario + ", vehiculo=" + vehiculo + "]";
+		return "Matricula [fechaMatricula=" + fechaMatricula + ", valorMatricula=" + valorMatricula + ", \n propietario="
+				+ propietario + ", \n vehiculo=" + vehiculo + "]";
 	}
 	
 	//SET Y GET

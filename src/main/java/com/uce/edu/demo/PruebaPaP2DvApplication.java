@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.uce.edu.demo.modelo.Propietario;
 import com.uce.edu.demo.modelo.Vehiculo;
-import com.uce.edu.demo.service.IMatriculaService;
+import com.uce.edu.demo.service.IMatriculaGestorService;
 import com.uce.edu.demo.service.IPropietarioService;
 import com.uce.edu.demo.service.IVehiculoService;
 
@@ -17,10 +17,13 @@ import com.uce.edu.demo.service.IVehiculoService;
 public class PruebaPaP2DvApplication implements CommandLineRunner{
 
 	@Autowired
-	private IMatriculaService iMatriculaService;
+	private IVehiculoService iVehiculoService;
 	
 	@Autowired
 	private IPropietarioService iPropietarioService;
+	
+	@Autowired
+	private IMatriculaGestorService iMatriculaGestorService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(PruebaPaP2DvApplication.class, args);
@@ -45,7 +48,14 @@ public class PruebaPaP2DvApplication implements CommandLineRunner{
 		v.setTipo("L");
 		v.setPrecio(new BigDecimal(200000));
 		
-		this.iMatriculaService.matricularVehiculo(v, p);
+		this.iVehiculoService.insertar(v);
+		
+		v.setMarca("Chevrolet");
+		v.setPrecio(new BigDecimal(40000));
+		
+		this.iVehiculoService.actualizar(v);
+		
+		this.iMatriculaGestorService.generar("1234567", "ABC123");
 		
 	}
 

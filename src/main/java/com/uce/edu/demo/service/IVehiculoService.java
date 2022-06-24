@@ -1,10 +1,15 @@
 package com.uce.edu.demo.service;
 
-import java.math.BigDecimal;
-
-import com.uce.edu.demo.modelo.Matricula;
+import com.uce.edu.demo.modelo.Vehiculo;
 
 public interface IVehiculoService {
 	
-	public BigDecimal valorMatricula(Matricula matricula,String placa, BigDecimal precio);
+	public void insertar(Vehiculo vehiculo);
+
+	public Vehiculo buscar(String placa);
+
+	public void actualizar(Vehiculo vehiculo);
+
+	public void eliminar(Vehiculo vehiculo);
+	
 }

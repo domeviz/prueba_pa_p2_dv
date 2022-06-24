@@ -14,9 +14,15 @@ public class PropietarioRepositoryImpl implements IPropietarioRepository {
 	}
 
 	@Override
-	public Propietario buscar(Propietario propietario) {
+	public void eliminar(String cedula) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha encontrado el propietario "+propietario);
+		System.out.println("Se ha eliminado el propietario "+cedula);
+	}
+	
+	@Override
+	public Propietario buscar(String cedula) {
+		// TODO Auto-generated method stub
+		System.out.println("Se ha encontrado el propietario "+cedula);
 		Propietario p=new Propietario();
 		p.setCedula("1234567");
 		p.setNombre("Domenica");

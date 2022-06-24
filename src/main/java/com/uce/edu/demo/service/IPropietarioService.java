@@ -5,4 +5,6 @@ import com.uce.edu.demo.modelo.Propietario;
 public interface IPropietarioService {
 
 	public void crearPropietario(Propietario propietario);
+	
+	public void eliminar(String cedula);
 }

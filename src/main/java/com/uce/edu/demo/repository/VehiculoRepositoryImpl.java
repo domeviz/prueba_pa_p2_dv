@@ -28,9 +28,9 @@ public class VehiculoRepositoryImpl implements IVehiculoRepository {
 	}
 
 	@Override
-	public void actualizar(String marca) {
+	public void actualizar(Vehiculo vehiculo) {
 		// TODO Auto-generated method stub
-		System.out.println("Se ha actualizado en la BD la marca: "+marca);
+		System.out.println("Se ha actualizado en la BD: "+vehiculo);
 	}
 
 	@Override
